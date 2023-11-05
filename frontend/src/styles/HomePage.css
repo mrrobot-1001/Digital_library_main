@@ -1,0 +1,957 @@
+/* Body Styles */
+body {
+  background-image: url('design2.gif');
+  background-repeat: no-repeat;
+  background-size: cover; /* Make the background cover the entire viewport */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; 
+  scroll-behavior: smooth;/* Prevent horizontal scrollbar */
+}
+body {
+  animation: animateBackground 20s linear infinite alternate;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.855); /* Darker transparent background */
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px; /* Decreased padding to make the navbar shorter */
+  backdrop-filter: blur(10px);
+  height: 100px; 
+  scroll-behavior: smooth;
+}
+.navbar a {
+  font-size: 20px;
+  color: #fff;
+  text-align: left;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s; /* Smooth background and text color transition */
+  position: relative; /* For pseudo-element positioning */
+}
+
+/* Hover styles for navigation links */
+.navbar a:hover {
+  background-color: #555; /* Darken the background on hover */
+  color: #fff; /* Change text color on hover */
+  transform: scale(1.05); /* Add a slight scale effect on hover */
+  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Smooth hover effect */
+}
+
+/* Add a pseudo-element for creating an underline animation */
+.navbar a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #3498db; /* Underline color */
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0); /* Initially, no underline */
+  transform-origin: right;
+  transition: transform 0.3s; /* Smooth underline animation */
+}
+
+.navbar a:hover::before {
+  transform: scaleX(1); /* Expand the underline on hover */
+  transform-origin: left;
+}
+
+/* Add a subtle box shadow on hover */
+.navbar a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Add a subtle background gradient for a modern look */
+.navbar a {
+  background: linear-gradient(135deg, #3498db, #8e44ad); /* Gradient background */
+  background-clip: text;
+  -webkit-background-clip: text; /* Clip the text to the gradient background */
+  color: transparent; /* Hide text color */
+}
+
+/* Optional: Hover effect for the background gradient */
+.navbar a:hover {
+  background-position: 100%; /* Animate the gradient background on hover */
+}
+
+.navbar a:hover {
+  background-color: #333333;
+  color: #fff; /* Text color change on hover */
+}
+
+.navbar  img {
+  width: 150px;
+  height: 70px;
+  border-radius: 8px;
+  align-self: center;
+
+}
+
+/* Icon Style */
+.navbar a .icon {
+  margin-right: 10px;
+  margin-left: 20px;
+}
+.icon-container {
+  margin-right: 10px; /* Adjust the margin as needed for spacing */
+}
+/* Button Style */
+.navbar a.button {
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s; /* Smooth background and text color transition */
+}
+
+@keyframes animateBackground {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 105%; /* Slightly zoom in the background */
+  }
+}
+
+.navbar a.button:hover {
+  background-color: #fb5909;
+}
+
+#loginButton {
+  font-size: 20px;
+  padding: 10px 10px;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+#loginButton::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #5ea8e8;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#loginButton:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+  left: 0;
+}
+
+#loginButton:hover {
+  background: #5ea8e8;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(94, 168, 232, 0.7);
+  transform: scale(1.05);
+}
+
+
+/* Login Form Container Styles */
+/* Container Styles */
+/* Container Styles */
+#loginFormContainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Form Header Styles */
+#loginFormContainer h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #fff;
+}
+
+/* User Type Buttons */
+.user-type-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 30px;
+}
+
+.user-type-button {
+  padding: 15px 30px;
+  background: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 20px;
+  transition: transform 0.3s, box-shadow 0.3s, color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.user-type-button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #3498db, #5ea8e8, #3498db);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+  top: 0;
+  left: 100%;
+  z-index: -1;
+}
+
+.user-type-button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #5ea8e8, #3498db, #5ea8e8);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+  top: 0;
+  right: 100%;
+  z-index: -1;
+}
+
+.user-type-button:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+  left: 0;
+}
+
+.user-type-button:hover::after {
+  transform: scaleX(1);
+  transform-origin: right;
+  right: 0;
+}
+
+.user-type-button:hover {
+  color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}
+
+
+/* Selected User Type Button */
+.selected-user-type {
+  padding: 10px 10px;
+  background: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 18px;
+  font-size: 18px;
+}
+
+/* Input Styles */
+#loginForm input[type="text"],
+#loginForm input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #333;
+  transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s, width 0.3s; /* Added width transition */
+  outline: none; /* Remove the default focus outline */
+}
+
+/* Input Focus Styles with Typing Effect */
+#loginForm input[type="text"]:focus,
+#loginForm input[type="password"]:focus {
+  background: rgba(255, 255, 255, 0.7);
+  color: #333;
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 90%; /* Slightly reduce the width on focus */
+  transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s, width 0.3s; /* Added width transition */
+}
+
+/* Typing Effect Animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 90%; }
+}
+
+#loginForm input[type="text"]:focus::before,
+#loginForm input[type="password"]:focus::before {
+  content: attr(placeholder);
+  display: inline-block;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  color: transparent;
+  animation: typing 0.5s steps(30, end) forwards;
+}
+
+
+
+/* Login Button */
+#loginForm button, #cancelButton {
+  padding: 12px 24px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 20px;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s, color 0.3s;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+
+#loginForm button::before, #cancelButton::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s, background 0.3s;
+  top: 0;
+  left: 100%;
+  z-index: -1;
+}
+
+/* Login Button Background Gradient */
+#loginForm button {
+  background: linear-gradient(135deg, #3498db, #6a89cc);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#loginForm button:hover {
+  background: linear-gradient(135deg, #6a89cc, #3498db);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+#loginForm button:focus {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#loginForm button:hover::before {
+  background: #6a89cc;
+  transform: scaleX(1);
+  transform-origin: left;
+  left: 0;
+}
+
+/* Cancel Button Background Gradient */
+#cancelButton {
+  background: linear-gradient(135deg, #e74c3c, #f45d3c);
+  margin-top: 20px;
+  margin-left: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#cancelButton:hover {
+  background: linear-gradient(135deg, #f45d3c, #e74c3c);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#cancelButton:hover::before {
+  background: #f45d3c;
+  transform: scaleX(1);
+  transform-origin: left;
+  left: 0;
+}
+
+
+
+
+/* Login Success Message */
+.login-success {
+  margin-top: 20px;
+  font-size: 20px;
+  color: green;
+}
+.text-center {
+  text-align: center;
+}
+.visitor-counter{
+  text-align: center;
+}
+/*new css*/
+/* HomePage.css */
+
+/* Grid container */
+.u-repeater-1 {
+  transform: translateZ(0); /* Apply hardware acceleration */
+  transition: transform 0.3s ease; /* Use smooth transitions */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid with a minimum width of 300px */
+  gap: 20px; /* Gap between grid items */
+  margin-top: 700px; /* Adjust the margin as needed */
+}
+
+/* Grid item */
+.u-repeater-item {
+  background-color: #fff; /* Background color for each grid item */
+  border: 1px solid #ddd; /* Border for each grid item */
+  padding: 20px;
+  text-align: center;
+  place-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Improved box shadow */
+  transition: transform 0.3s ease; /* Add a smooth transform transition for hover effect */
+}
+
+.u-repeater-item img {
+  max-width: 100%; /* Ensure images don't exceed their container */
+  border-radius: 10px;
+  height: 100px;
+}
+
+.u-text-1 {
+  font-size: 24px; /* Title font size */
+  margin-top: 20px;
+  color: #333; /* Text color */
+}
+
+.u-text-2 {
+  font-size: 16px; /* Description font size */
+  margin-top: 10px;
+  color: #777; /* Text color */
+}
+
+.u-btn-1 {
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+  transition: background-color 0.3s ease; /* Smooth button hover transition */
+}
+
+.u-btn-1:hover {
+  background-color: #0056b3; /* Button background color on hover */
+}
+
+/* Additional styling for responsive design */
+@media (max-width: 768px) {
+  .u-repeater-1 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust column width for smaller screens */
+  }
+}
+
+/* Hover effect for grid items */
+.u-repeater-item:hover {
+  transform: translateY(-5px); /* Add a slight upward translation on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Improved box shadow on hover */
+}
+
+/* Improved button style */
+.u-btn-1 {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.u-btn-1:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+/*team page css*/
+.responsive-cell-block {
+  min-height: 75px;
+  transform: translateZ(0); /* Apply hardware acceleration */
+  transition: transform 0.3s ease; /* Use smooth transitions */
+}
+
+* {
+  font-family: Nunito, sans-serif;
+}
+
+.text-blk {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  line-height: 25px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+.responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  justify-content: flex-start;
+}
+
+.outer-container {
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  background-color: rgb(255, 235, 234);
+}
+
+.heading-text {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 35px;
+  color: rgb(51, 51, 51);
+  margin-top: 0px;
+  margin-right: 200px;
+  margin-bottom: 32px;
+  margin-left: 0px;
+  text-align: center;
+}
+
+.sub-heading-text {
+  max-width: 470px;
+  font-size: 25px;
+  line-height: 35px;
+  text-align: center;
+  font-weight: 700;
+  color: rgb(102, 102, 102);
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 100px;
+  margin-left: 100px;
+  margin: 0 0 70px 0;
+}
+
+.inner-container {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  margin-right: 0px;
+  margin-bottom: 50px;
+  margin-left: 200px;
+}
+
+.cards-container {
+  max-width: 1320px;
+}
+
+.name {
+  font-size: 22px;
+  line-height: 35px;
+  font-weight: 700;
+  color: rgb(102, 102, 102);
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+}
+
+.position {
+  color: rgb(244, 152, 146);
+  font-size: 22px;
+  line-height: 35px;
+  font-weight: 700;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+  margin-left: 0px;
+}
+
+.team-member-image-container {
+  width: 200px; /* Set a fixed width */
+  height: 200px; /* Set a fixed height */
+  overflow: hidden; /* Hide the overflowing parts of the image */
+  border-radius: 50%; /* Make the container round */
+}
+
+.team-member-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.team-member-image:hover {
+  -webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+
+.card-container {
+  padding: 0 25px 30px;
+  margin: 0 auto 30px;
+  clear: both; /* Clear the float to prevent overlap with the icons */
+}
+
+
+@media (max-width: 1024px) {
+  .socialMediaIcons {
+    margin: 0 20px 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    margin: 0 0 60px 0;
+    width: 80%;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .inner-container {
+    padding: 10px 0 10px 0;
+    margin: 50px 0 50px 0;
+  }
+
+  .cards-container {
+    padding: 10px 0 10px 0;
+  }
+
+  .card-container {
+    width: 100%;
+    padding: 0 15px 0 15px;
+  }
+
+  .outer-container {
+    padding: 10px 20px 10px 20px;
+  }
+
+  .sub-heading-text {
+    font-size: 20px;
+    line-height: 25px;
+    margin: 0 0 30px 0;
+  }
+
+  .heading-text {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+/*responsive css*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap');
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.wk-desk-1 {
+  width: 8.333333%;
+}
+
+.wk-desk-2 {
+  width: 16.666667%;
+}
+
+.wk-desk-3 {
+  width: 25%;
+}
+
+.wk-desk-4 {
+  width: 33.333333%;
+}
+
+.wk-desk-5 {
+  width: 41.666667%;
+}
+
+.wk-desk-6 {
+  width: 50%;
+}
+
+.wk-desk-7 {
+  width: 58.333333%;
+}
+
+.wk-desk-8 {
+  width: 66.666667%;
+}
+
+.wk-desk-9 {
+  width: 75%;
+}
+
+.wk-desk-10 {
+  width: 83.333333%;
+}
+
+.wk-desk-11 {
+  width: 91.666667%;
+}
+
+.wk-desk-12 {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .wk-ipadp-1 {
+    width: 8.333333%;
+  }
+
+  .wk-ipadp-2 {
+    width: 16.666667%;
+  }
+
+  .wk-ipadp-3 {
+    width: 25%;
+  }
+
+  .wk-ipadp-4 {
+    width: 33.333333%;
+  }
+
+  .wk-ipadp-5 {
+    width: 41.666667%;
+  }
+
+  .wk-ipadp-6 {
+    width: 50%;
+  }
+
+  .wk-ipadp-7 {
+    width: 58.333333%;
+  }
+
+  .wk-ipadp-8 {
+    width: 66.666667%;
+  }
+
+  .wk-ipadp-9 {
+    width: 75%;
+  }
+
+  .wk-ipadp-10 {
+    width: 83.333333%;
+  }
+
+  .wk-ipadp-11 {
+    width: 91.666667%;
+  }
+
+  .wk-ipadp-12 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wk-tab-1 {
+    width: 8.333333%;
+  }
+
+  .wk-tab-2 {
+    width: 16.666667%;
+  }
+
+  .wk-tab-3 {
+    width: 25%;
+  }
+
+  .wk-tab-4 {
+    width: 33.333333%;
+  }
+
+  .wk-tab-5 {
+    width: 41.666667%;
+  }
+
+  .wk-tab-6 {
+    width: 50%;
+  }
+
+  .wk-tab-7 {
+    width: 58.333333%;
+  }
+
+  .wk-tab-8 {
+    width: 66.666667%;
+  }
+
+  .wk-tab-9 {
+    width: 75%;
+  }
+
+  .wk-tab-10 {
+    width: 83.333333%;
+  }
+
+  .wk-tab-11 {
+    width: 91.666667%;
+  }
+
+  .wk-tab-12 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .wk-mobile-1 {
+    width: 8.333333%;
+  }
+
+  .wk-mobile-2 {
+    width: 16.666667%;
+  }
+
+  .wk-mobile-3 {
+    width: 25%;
+  }
+
+  .wk-mobile-4 {
+    width: 33.333333%;
+  }
+
+  .wk-mobile-5 {
+    width: 41.666667%;
+  }
+
+  .wk-mobile-6 {
+    width: 50%;
+  }
+
+  .wk-mobile-7 {
+    width: 58.333333%;
+  }
+
+  .wk-mobile-8 {
+    width: 66.666667%;
+  }
+
+  .wk-mobile-9 {
+    width: 75%;
+  }
+
+  .wk-mobile-10 {
+    width: 83.333333%;
+  }
+
+  .wk-mobile-11 {
+    width: 91.666667%;
+  }
+
+  .wk-mobile-12 {
+    width: 100%;
+  }
+}
+/*Foooter*/
+footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  background: linear-gradient(135deg, #3a48c3, #d016b1);
+  color: rgb(252, 248, 248);
+  text-align: center;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+ 
+  border: 2px solid #000000;
+  border-bottom: 1; 
+}
+.footer-logo{
+  height: 50px;
+  width: 100px;
+}
+/* Footer hover effect */
+footer:hover {
+  background: linear-gradient(135deg, #d016b1, #3a48c3);
+}
+
+.footer-content {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-social-icons {
+  display: flex;
+  align-items: left;
+}
+
+.footer-social-icons a {
+  color: white;
+  font-size: 20px;
+  margin: 10px 10px;
+  text-decoration: none;
+}
+
+/* Smaller image size */
+.circular-image {
+  width: auto;
+  height: 45px;
+  margin: 5px;
+}
+
+/* Circular image */
+.circular-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.visitor-counter{
+  margin-right: 10px;
+}

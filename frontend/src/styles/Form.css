@@ -1,0 +1,62 @@
+/* AdminLogin.css (You can create a separate CSS file for this component) */
+.admin-login-container {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+}
+
+.admin-login-container h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.admin-login-container input[type="text"],
+.admin-login-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.admin-login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.admin-login-container button:hover {
+  background-color: #0056b3;
+}
+
+.admin-login-container p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #FF6347; /* Red color for error message */
+}
+
+/* Center the login container vertically and horizontally */
+.admin-login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0; /* Background color for the page */
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+  .admin-login-container {
+    width: 80%;
+  }
+}

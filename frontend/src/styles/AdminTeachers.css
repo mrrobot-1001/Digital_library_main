@@ -1,0 +1,124 @@
+/* AdminTeachers.css */
+
+/* Teacher List Container */
+.teacher-list-container {
+  margin-left: 250px; /* Match the sidebar width */
+  padding: 20px;
+  background-color: #fff; 
+  min-height: 100vh;/* Add a white background color */
+}
+
+/* Teacher List Title */
+.teacher-list-container h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.department-filter {
+  margin-bottom: 20px;
+}
+
+.department-filter select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff; /* Background color for the filter dropdown */
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+}
+/* Add Teacher Button */
+.add-teacher-button {
+  background-color: #ff9900; /* Match the sidebar accent color */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Add Teacher Form */
+.add-teacher-form {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.add-teacher-form h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.add-teacher-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-teacher-form input[type="text"],
+.add-teacher-form input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.add-teacher-form input[type="file"] {
+  padding: 10px;
+}
+
+.add-teacher-form button[type="submit"],
+.add-teacher-form button[type="button"] {
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Teacher List Table */
+.teacher-list-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.teacher-list-table th,
+.teacher-list-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.teacher-list-table th {
+  background-color: #2a2e3b; /* Match the sidebar background color */
+  color: #fff;
+}
+
+/* Delete Button */
+.delete-button {
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  margin-right: 5px;
+}
+
+.delete-button:hover {
+  background-color: #333; /* Hover background color */
+  transform: scale(1.05); /* Slight scale on hover for an aesthetic effect */
+}
+
+/* Teacher Photo */
+.teacher-photo {
+  max-width: 100px; /* Adjust the max-width as needed */
+  height: auto;
+  border-radius: 5px;
+  
+}

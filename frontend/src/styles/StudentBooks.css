@@ -1,0 +1,84 @@
+/* StudentBooks.css */
+
+/* Book Grid Container */
+.book-grid-container {
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Book Grid */
+.book-grid {
+  display: flex; /* Use flexbox for a row layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next row if needed */
+   /* Distribute items evenly with space in between */
+  gap: 10px;
+  margin-top: 20px; /* Add some margin between the grid and other content */
+}
+
+/* Book Card */
+.book-card {
+  background-color: #fff;
+  flex: 0 0 calc(33.33% - 20px); /* Set a fixed width for each card (adjust as needed) */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+/* Book Image */
+.book-image img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+/* Book Title */
+.book-title {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Book Author */
+.book-author {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #777;
+}
+
+/* Book Description */
+.book-description {
+  font-size: 0.9rem;
+  margin: 5px 0;
+  color: #777;
+}
+
+/* Read Button */
+.read-button {
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+/* Hover Animation */
+.book-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.read-button:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}

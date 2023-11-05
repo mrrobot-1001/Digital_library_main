@@ -1,0 +1,78 @@
+/* AdminContent.css */
+
+/* Container for AdminContent */
+.admin-content {
+  margin-left: 250px; /* Adjust for the sidebar width */
+  padding: 20px;
+}
+
+/* Content Header */
+.admin-content h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333; /* Text color for the header */
+}
+
+/* Dropdown for Content Type */
+.category-dropdown {
+  margin-bottom: 20px;
+}
+
+.category-dropdown select {
+  background-color: #2a2e3b; /* Dark background color */
+  color: #fff; /* Text color */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s; /* Add transition effect */
+}
+
+/* Hover effect for dropdown */
+.category-dropdown select:hover {
+  background-color: #ff9900; /* Accent color on hover */
+}
+
+/* Content Grid */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid layout */
+  gap: 20px; /* Gap between content cards */
+}
+
+/* Content Card */
+.content-card {
+  background-color: #fff; /* Card background color */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Card shadow */
+  transition: transform 0.3s, box-shadow 0.3s; /* Add transition effect */
+}
+
+/* Hover effect for content cards */
+.content-card:hover {
+  transform: scale(1.05); /* Scale up on hover */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+/* Card Text Styles */
+.content-card p {
+  font-size: 18px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 10px;
+  color: #333; /* Text color for card content */
+}
+
+/* PDF Viewer Link Styles */
+.pdf-viewer a {
+  color: #ff9900; /* Accent color for PDF links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hover effect for PDF links */
+.pdf-viewer a:hover {
+  text-decoration: underline; /* Underline on hover */
+  transition: text-decoration 0.3s; /* Add transition effect */
+}
